@@ -1,1 +1,13 @@
+# .nosana-ci.yml
+nosana: 
+    description: Nosana docker in docker
 
+global:
+    image: nosana/podman
+
+jobs:
+    - name: build
+      environment: # optional
+          CONTAINER_HOST: tcp://localhost:8080
+      commands: # required
+          - podman build .
