@@ -3,11 +3,11 @@ nosana:
     description: Nosana docker in docker
 
 global:
-    image: nosana/podman
+    image: nosana/podman:v1.0.11
 
 jobs:
     - name: build
-      environment: # optional
+      environment:
           CONTAINER_HOST: tcp://localhost:8080
-      commands: # required
-          - podman build .
+      commands:
+          - docker build . -t alpine
