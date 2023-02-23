@@ -1,12 +1,12 @@
 nosana:
-    description: Nosana docker in docker
+  description: Nosana docker in docker
 
 global:
-    image: nosana/podman:v1.0.12
+  image: nosana/podman:v1.0.12
 
 jobs:
-    - name: build
-      environment:
-          CONTAINER_HOST: tcp://localhost:8080
-      commands:
-          - docker build . -t alpine
+  - name: build
+    environment:
+      CONTAINER_HOST: tcp://localhost:8080
+    commands:
+      - docker build . -t alpine
