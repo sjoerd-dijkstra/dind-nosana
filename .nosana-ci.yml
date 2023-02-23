@@ -1,9 +1,8 @@
-# .nosana-ci.yml
-nosana: 
+nosana:
     description: Nosana docker in docker
 
 global:
-    image: nosana/podman:v1.0.11
+    image: nosana/podman:v1.0.12
 
 jobs:
     - name: build
